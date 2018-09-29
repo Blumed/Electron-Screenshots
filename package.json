@@ -1,0 +1,27 @@
+{
+  "name": "electron-quick-start",
+  "productName": "WIW Screenshots",
+  "version": "1.0.0",
+  "description": "A minimal Electron application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "production": "electron-packager . --overwrite --platform=darwin --arch=x64"
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo",
+    "production"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^2.0.0",
+    "electron-packager": "^12.1.2",
+    "pageres": "^4.5.1"
+  }
+}
