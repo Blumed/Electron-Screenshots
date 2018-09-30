@@ -1,4 +1,4 @@
-![alt text]( https://github.com/Blumed/Electron-Screenshots/blob/master/icons/Apps-CSGO.png "Gareth Mac App")
+<img src="https://github.com/Blumed/Electron-Screenshots/blob/master/icons/Apps-CSGO.png" width="400px" height="400px" alt="Gareth Mac App">
 
 # Gareth
 
