@@ -9,9 +9,14 @@ const chokidar = require('chokidar');
 const path = require('path');
 const Pageres = require('pageres');
 
+// Global Variables
 let myFilePath;
 const screenshots = __dirname + '/screenshots';
 const log = console.log.bind(console);
+// const btnCustom = document.getElementById('js-btn-custom');
+// const btnFile = document.getElementById('js-btn-file');
+const toggleCustom = document.getElementById('js-toggle-custom');
+const toggleFile = document.getElementById('js-toggle-file');
 
 // Initialize watcher.
 let watcher = chokidar.watch(screenshots, {
@@ -50,7 +55,7 @@ document.getElementById('file-contents').addEventListener('click', function () {
 });
 }, false);
 
-document.getElementById('clear-screenshots').addEventListener('click', function () {
+document.querySelector('.js-clear-screenshots').addEventListener('click', function () {
     fs.readdir(screenshots, (err, files) => {
         if (err) throw err;
 
@@ -62,7 +67,29 @@ document.getElementById('clear-screenshots').addEventListener('click', function 
     });
 }, false);
 
-watcher = chokidar.watch('file, dir, glob, or array', {
-    ignored: /(^|[\/\\])\../,
-    persistent: true
-  });
+  // Toggle url parsing options
+
+  document.getElementById('js-btn-custom').addEventListener('click', function () {
+    toggleCustom.classList.remove("js-is-inactive");
+    toggleCustom.classList.add("js-is-active");
+    toggleFile.classList.remove("js-is-active");
+    toggleFile.classList.add("js-is-inactive");
+    console.log('costom');
+  }, false);
+
+  document.getElementById('js-btn-file').addEventListener('click', function () {
+    toggleCustom.classList.remove("js-is-active");
+    toggleCustom.classList.add("js-is-inactive");
+    toggleFile.classList.remove("js-is-inactive");
+    toggleFile.classList.add("js-is-active");
+    console.log('file');
+}, false);
+//   myFunction = ()=> {
+//       if(){}
+//     var x = document.getElementById("myDIV");
+//     if (x.style.display === "none") {
+//         x.style.display = "block";
+//     } else {
+//         x.style.display = "none";
+//     }
+// }

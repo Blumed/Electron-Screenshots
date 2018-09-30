@@ -1,12 +1,12 @@
 {
-  "name": "electron-quick-start",
-  "productName": "WIW Screenshots",
+  "name": "Gareth",
+  "productName": "Gareth",
   "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "description": "Web Screenshot Generator",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "production": "electron-packager . --overwrite --platform=darwin --arch=x64"
+    "build": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=icons/Apps-CSGO.icns --prune=true --out=release-builds"
   },
   "repository": "https://github.com/electron/electron-quick-start",
   "keywords": [
@@ -17,7 +17,7 @@
     "demo",
     "production"
   ],
-  "author": "GitHub",
+  "author": "Cullan Luther",
   "license": "CC0-1.0",
   "devDependencies": {
     "electron": "^2.0.0",

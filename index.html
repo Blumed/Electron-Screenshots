@@ -3,17 +3,39 @@
   <head>
     <meta charset="UTF-8">
     <title>WIW ScreenShots</title>
+    <link rel="stylesheet" href="style.css">
+    <style> ::selection { background: cyan; } </style>
   </head>
   <body>
-    <h1>Screenshots</h1>
-    <input type="text" placeholder="Please type urls you would like" id="user-urls" disabled="disabled"/>
-    <button type="button" id="file-contents">Select File To Parse</button>
-    <button type="button" id="clear-screenshots">Clear</button>
 
-    <img src="./screenshots/2018-09-29_wheniwork.com_320x568.png" width="100" height="150" alt="">
+    <head>
+      <img class="app-logo" src="./icons/Apps-CSGO.png" alt="" width="75" height="75">
+      <h1 class="app-title">Gareth</h1>
+    </head>
+    
+
+    <form action="form" class="text-center btn-group">
+      <input type="radio" name="parsing-toggle" id="js-radio-custom" class="hidden" checked>
+      <label for="js-btn-custom"  id="js-btn-custom" class="btn">Manually Add Urls</label>
+      <input type="radio" name="parsing-toggle" id="js-radio-file" class="hidden">
+      <label for="js-btn-file" id="js-btn-file" class="btn">Select File of Url List</label>
+    </form>
+
+    <div id="js-toggle-custom" class="js-is-active">
+      <p>Add your own urls you would like below</p>
+      <input type="text" placeholder="Please type urls you would like" id="user-urls"/>
+      <button type="button" class="btn btn-clear js-clear-screenshots">Clear</button>
+    </div>
+
+    <div id="js-toggle-file" class="js-is-inactive">
+        <p>Select file containing a list of urls</p>
+      <button type="button" id="file-contents" class="btn">File Select</button>
+      <button type="button" class="btn btn-clear js-clear-screenshots">Clear</button>
+    </div>
 
     <script>
       require('./renderer.js')
     </script>
+
   </body>
 </html>
