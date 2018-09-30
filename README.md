@@ -1,4 +1,4 @@
-[logo]: https://github.com/Blumed/Electron-Screenshots/blob/master/icons/Apps-CSGO.png
+![alt text]( https://github.com/Blumed/Electron-Screenshots/blob/master/icons/Apps-CSGO.png "Gareth Mac App")
 
 # Gareth
 
