@@ -1,4 +1,4 @@
-<img src="https://github.com/Blumed/Electron-Screenshots/blob/master/icons/Apps-CSGO.png" width="400px" height="400px" alt="Gareth Mac App">
+<div align="center"><img src="https://github.com/Blumed/Electron-Screenshots/blob/master/icons/Apps-CSGO.png" width="500px" height="500px" alt="Gareth Mac App" /></div>
 
 # Gareth
 
