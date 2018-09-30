@@ -1,44 +1,26 @@
-# electron-quick-start
+[logo]: https://github.com/Blumed/Electron-Screenshots/blob/master/icons/Apps-CSGO.png
 
-**Clone and run for a quick way to see Electron in action.**
+# Gareth
 
-This is a minimal Electron application based on the [Quick Start Guide](https://electronjs.org/docs/tutorial/quick-start) within the Electron documentation.
+Just a sneaking guy taking pictures of your website named Gareth.
 
-**Use this app along with the [Electron API Demos](https://electronjs.org/#get-started) app for API code examples to help you get started.**
+Gareth is powered by Pageres and hopes to take lots of screenshots of your website. You have two options to start with.
 
-A basic Electron application needs just these files:
+1. Add your urls manually by typing them into a input field.
+2. Point to a file with lots of urls in it so Garth can take tons of screenshots all at once. This is a nice option when you need a full look at your site. Maybe you get this list from your
 
-- `package.json` - Points to the app's main file and lists its details and dependencies.
-- `main.js` - Starts the app and creates a browser window to render HTML. This is the app's **main process**.
-- `index.html` - A web page to render. This is the app's **renderer process**.
+**Todo**
 
-You can learn more about each of these components within the [Quick Start Guide](https://electronjs.org/docs/tutorial/quick-start).
+- [ ] Connect event listeners in render.js to app.js using ipc. Currently after running a build none of the click events work.
+- [ ] Add watcher to screenshot folder so other parts of the app know what is going on
+- [ ] Add small about/tutorial regarding all the options and what they do
+- [ ] Add ability to select specific images to save
+- [ ] Add fuzzy search functionaity that only shows images which match keywords typed
+- [ ] Add a cropped version of each image and when clicked it opens a new window showing the full image
+- [ ] Add default screen rez size and the ability to manually add them which would override the default
+- [ ] Under each cropped image a small amount of data(url,rez,size) about the image
 
-## To Use
 
-To clone and run this repository you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
-
-```bash
-# Clone this repository
-git clone https://github.com/electron/electron-quick-start
-# Go into the repository
-cd electron-quick-start
-# Install dependencies
-npm install
-# Run the app
-npm start
-```
-
-Note: If you're using Linux Bash for Windows, [see this guide](https://www.howtogeek.com/261575/how-to-run-graphical-linux-desktop-applications-from-windows-10s-bash-shell/) or use `node` from the command prompt.
-
-## Resources for Learning Electron
-
-- [electronjs.org/docs](https://electronjs.org/docs) - all of Electron's documentation
-- [electronjs.org/community#boilerplates](https://electronjs.org/community#boilerplates) - sample starter apps created by the community
-- [electron/electron-quick-start](https://github.com/electron/electron-quick-start) - a very basic starter Electron app
-- [electron/simple-samples](https://github.com/electron/simple-samples) - small applications with ideas for taking them further
-- [electron/electron-api-demos](https://github.com/electron/electron-api-demos) - an Electron app that teaches you how to use Electron
-- [hokein/electron-sample-apps](https://github.com/hokein/electron-sample-apps) - small demo apps for the various Electron APIs
 
 ## License
 
