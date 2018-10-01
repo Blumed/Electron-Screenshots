@@ -55,6 +55,9 @@ body {
     color: lightslategray;
     padding: 2rem;
 }
+:root {
+    --grey: #4f4f4f;
+}
 .app-logo {
     display: inline-block;
 }
@@ -80,7 +83,7 @@ p {
 }
 /*inputs!*/
 [type="text"] {
-    border: 1px solid #4f4f4f;
+    border: 1px solid var(--grey);
     padding: 12px 12px;
     border-radius: 4px;
     transition: all 0.2s ease-in;
@@ -92,7 +95,7 @@ p {
     font-size: 0;
   }
   .btn-group .btn {
-    border: 1px solid grey;
+    border: 1px solid var(--grey);
     font-size: 16px;
   }
   .btn-group .btn:not(:last-of-type) {
@@ -110,15 +113,15 @@ p {
     margin-right: 0;
   }
   .btn-group input:checked + label {
-    background-color: white;
-    color: #4f4f4f
+    background-color: var(--grey);
+    color: white;
   }
 
 .btn {
     display: inline-block;
     padding: 12px 24px;
     background-color: transparent;
-    border: 1px solid #4f4f4f;
+    border: 1px solid var(--grey);
     border-radius: 4px;
     font-size: inherit;
     transition: all 0.2s ease-in;
@@ -203,3 +206,8 @@ p {
     overflow: hidden;
     opacity: 0;
   }
+
+  /*
+  You dont need two different images made. Use css to make a croped version and then figure out how to show full image in new popup window
+  
+  */

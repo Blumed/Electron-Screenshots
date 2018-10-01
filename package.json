@@ -20,12 +20,12 @@
   "author": "Cullan Luther",
   "license": "CC0-1.0",
   "devDependencies": {
+    "chokidar": "^2.0.4",
     "electron": "^2.0.0",
     "electron-packager": "^12.1.2",
     "pageres": "^4.5.1"
   },
   "dependencies": {
-    "chokidar": "^2.0.4",
     "express": "^4.16.3"
   }
 }
