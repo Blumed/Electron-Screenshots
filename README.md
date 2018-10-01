@@ -12,7 +12,7 @@ Gareth is powered by Pageres and hopes to take lots of screenshots of your websi
 **Todo**
 
 - [ ] Connect event listeners in render.js to app.js using ipc. Currently after running a build none of the click events work.
-- [ ] Add watcher to screenshot folder so other parts of the app know what is going on
+- [x] Add watcher to screenshot folder so other parts of the app know what is going on
 - [ ] Add small about/tutorial regarding all the options and what they do
 - [ ] Add ability to select specific images to save
 - [ ] Add fuzzy search functionaity that only shows images which match keywords typed
