@@ -14,33 +14,40 @@ let myFilePath;
 const screenshots = __dirname + '/screenshots';
 const toggleCustom = document.getElementById('js-toggle-custom');
 const toggleFile = document.getElementById('js-toggle-file');
-let watched = watcher.getWatched();
 
 // Initialize watcher.
 const watcher = chokidar.watch(screenshots, {
     ignored: /(^|[\/\\])\../,
     persistent: true,
-    ignored: '*.png.*',
     cwd: '.',
+    ignoreInitial: false
     });
     watcher.on('add', (event, path) => {
         console.log(event, path);
+        thumbnails();
       });
 
+// Prep images for page
+function thumbnails() {
+    let watched = watcher.getWatched().screenshots;
+    const node = document.getElementById('image-grid'); 
 
-function Photo(src) {
-    this.src = src;
-    var container = document.getElementById('image-grid'); 
     var img = document.createElement('img');
-    img.src = './screenshots/' + watcher.getWatched().screenshots[0];
-    img.className = 'thumb';
-    img.style.width = '200px';
-
-    this.create = function() {
-        container.appendChild(img);
+    var imageWrap = document.createElement('div');
+    imageWrap.setAttribute("class", "image-block");
+    for (let index = 0; index < watched.length; index++) {
+        img.src = './screenshots/' + watched[index];
+        console.log(img);
+        node.appendChild(imageWrap);
+        imageWrap.appendChild(img);
+        
     }
-    console.log('clicked');
 }
+
+
+
+
+// Event listeners
 document.body.addEventListener('click', function () {
 
     //Custom Urls Field and Parse
@@ -56,7 +63,9 @@ document.body.addEventListener('click', function () {
             let pageres = new Pageres({delay: 4})
             .src(arrUrls[i].toString(), ['480x320', '1024x768', 'iphone 5s'], {incrementalName: true, filename: '<%= date %>_<%= url %>_<%= size %>'})
             .dest(__dirname + '/screenshots')
-            .run()
+            .run().then(() => {
+                console.log('done');
+              });
         }
     }
 
@@ -78,7 +87,9 @@ document.body.addEventListener('click', function () {
                 let pageres = new Pageres({delay: 4})
                 .src(arrUrls[i].toString(), ['480x320', '1024x768', 'iphone 5s'], {incrementalName: true, filename: '<%= date %>_<%= url %>_<%= size %>'})
                 .dest(__dirname + '/screenshots')
-                .run()
+                .run().then(() => {
+                  console.log('done');
+                });
             }
         });
     }
@@ -94,6 +105,12 @@ document.body.addEventListener('click', function () {
                 });
             }
         });
+        
+        // Clear grid
+        document.getElementById('image-grid').innerHTML = '';
+
+        //  Clear text field
+        document.getElementById('js-custom-urls').value = '';
     }
 
     // Toggle url parsing options
@@ -112,8 +129,8 @@ document.body.addEventListener('click', function () {
     console.log(watcher.getWatched().screenshots);
 
     if (event.target.classList.contains("js-make-grid")) {
-        Photo();
-        console.log(watcher.getWatched().screenshots.length);
+        thumbnails();
+        console.log(watcher.getWatched());
     }
 
 }, false);
